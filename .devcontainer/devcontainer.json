@@ -16,15 +16,17 @@
     ],
     "remoteUser": "root",
     // Set *default* container specific settings.json values on container create.
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-    },
-    // Add the IDs of extensions you want installed when the container is created.
-    "extensions": [
-        "ms-python.python",
-    ]
-    // Use 'postCreateCommand' to run commands after the container is created.
-    // "postCreateCommand": "npm install",
-    // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-    // "remoteUser": "node"
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash",
+                "editor.defaultFormatter": "ms-python.black-formatter"
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "ms-python.python",
+                "ms-python.black-formatter"
+            ]
+        }
+    }
 }

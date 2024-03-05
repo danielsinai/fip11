@@ -1,19 +1,13 @@
 import yaml
 from typing import List, Literal, Optional
-from pydantic import BaseModel, StrictStr
+from pydantic import BaseModel
 
+from fip11.models import SaslOptions
 
-class SaslOptions(BaseModel):
-    username: StrictStr
-    password: StrictStr
-    mechanism: Optional[StrictStr]
-    protocol: Optional[StrictStr]
 
 class StaticCluster(BaseModel):
     impl: Literal["static"]
-    name: str
-    brokers: List[str]
-    sasl: Optional[SaslOptions]
+    clsuter: 
 
 class HTTPClsuters(BaseModel):
     impl: Literal["http"]
