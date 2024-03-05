@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "fip11"
+version = "0.1.0"
+description = "Kafka solution for managing central clusters with quotas"
+authors = ["danielsinai <daniel.sinai.main@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.6.3"
+pydantic-yaml = "^1.2.1"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.8.0"
+black = "^24.2.0"
+flake8 = "^7.0.0"
+bandit = "^1.7.7"
+isort = "^5.13.2"
+pytest = "^8.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
